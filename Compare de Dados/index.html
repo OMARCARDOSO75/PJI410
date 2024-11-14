@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<HTMl lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <title>GRAFINDICE</title>
+    </head>
+
+<body>
+
+    <NAV>
+        <H1>GRÁFICO DE COMPARAÇÃO DOS DADOS COLETADOS</H1>
+        <Ul>
+            <li><a class="btn-link" href="c:\Users\erica\OneDrive\Desktop\Omar\PJI410\index.HTML">HOME</a></li>           
+        </Ul>
+    </NAV>
+
+    <canvas class="line-chart", height="100", width="280"></canvas>
+    
+    <script>
+        var ctx = document.getElementsByClassName("line-chart");
+
+        // Type, Data and Options
+        var chartGraph = new Chart(ctx, {
+            type: 'line',
+            data: {
+            labels: ["Abr/22","Mai/22","Jun/22","Jul/22","Ago/22","Set/22","Out/22","Nov/22","Dez/22","Jan/23"],
+                datasets: [
+                    {
+                    label: "GRÁFICO DE TEMPERATURAS",
+                    data: [26.23,27.26,24.48,25.05,24,23.08,22.58,22.48,19.16,19.12],
+                    borderWidth: 4,
+                    borderColor: 'rgba(77,166,253,1)',
+                    backgroundColor: ['#000', '#901','#252','#83','#344','#705','#466','#607','#558','#123']
+                    },
+                    {
+                    label: "GRÁFICO DE UMIDADE (%)",
+                    data: [42.76,36.27,49.1,54.3,57.8,57.3,59.36,56.55,50.42,56.73],
+                    borderWidth: 3,
+                    borderColor: 'rgba(150,166,99,1)',
+                    backgroundColor: ['#000', '#901','#252','#83','#344','#705','#466','#607','#558','#123']
+                    },
+                    {
+                    label: "ÍNDICE DE CALOR",
+                    data: [25.75,26.5,24.17,23.28,23.75,22.95,22.37,21.98,18.88,18.56],
+                    borderWidth: 4,
+                    borderColor: 'rgba(321,66,99,13)',
+                    backgroundColor: ['#000', '#901','#252','#83','#344','#705','#466','#607','#558','#123']
+                    },
+                        ]
+                }
+        })
+        
+
+    </script>
+
+</body>
